@@ -9,9 +9,9 @@ public class TestOffByOne {
 
     // Your tests go here.
      **/
-    CharacterComparator offbyone = new OffByOne();
     @Test
     public void testEqualChars() {
+        OffByOne offbyone = new OffByOne();
         assertFalse(offbyone.equalChars('a', 'a'));
         assertFalse(offbyone.equalChars('a', 'A'));
         assertFalse(offbyone.equalChars('a', 'z'));
