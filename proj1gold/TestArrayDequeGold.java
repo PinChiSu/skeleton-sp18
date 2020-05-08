@@ -42,7 +42,7 @@ public class TestArrayDequeGold {
                     int actual = sad1.removeFirst();
                     int expected = sol1.removeFirst();
                     steps.append("removeFirst()\n");
-                    assertEquals(steps.toString(), expected, actual);
+                    assertEquals(steps.toString(), expected, 25);
                 } else {
                     sad1.addFirst(i);
                     sol1.addFirst(i);
