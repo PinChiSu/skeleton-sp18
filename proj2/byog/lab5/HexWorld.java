@@ -13,7 +13,9 @@ import java.util.Random;
  * Draws a world consisting of hexagonal regions.
  */
 public class HexWorld {
-    //Represents the position of hexagon.
+    private static final int WIDTH = 60;
+    private static final int HEIGHT = 30;
+    //Creates a very simple class represents the position of hexagon.
     public static class Position {
         Position(int positionX, int positionY) {
             int x = positionX;
@@ -51,6 +53,24 @@ public class HexWorld {
         }
     }
 
+    private static void initializeTiles(TETile[][] world) {
+        for (int x = 0; x < WIDTH; x += 1) {
+            for (int y = 0; y < HEIGHT; y += 1) {
+                world[x][y] = Tileset.NOTHING;
+            }
+        }
+    }
+
     public static void main(String[] args) {
+        // initialize the tile rendering engine with a window of size WIDTH x HEIGHT
+        TERenderer ter = new TERenderer();
+        ter.initialize(WIDTH, HEIGHT);
+
+        // initialize tiles
+        TETile[][] world = new TETile[WIDTH][HEIGHT];
+        initializeTiles(world);
+
+
+
     }
 }
