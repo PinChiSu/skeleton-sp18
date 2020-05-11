@@ -68,14 +68,14 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
 
     //Must add iterator() in ArrayRingBuffer class
     public Iterator<T> iterator() {
-        return new bufferIterator();
+        return new BufferIterator();
     }
 
-    private class bufferIterator implements Iterator<T> {
+    private class BufferIterator implements Iterator<T> {
         private int currentPos;
         private int count;
 
-        private bufferIterator() {
+        private BufferIterator() {
             currentPos = first;
             count = 0;
         }

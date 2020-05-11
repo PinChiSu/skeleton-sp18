@@ -14,7 +14,7 @@ public class GuitarString {
     /* Create a guitar string of the given frequency.  */
     public GuitarString(double frequency) {
 
-        buffer = new ArrayRingBuffer<Double> ((int) Math.round(SR / frequency));
+        buffer = new ArrayRingBuffer<Double>((int) Math.round(SR / frequency));
         //Filled with zeros
         while (!buffer.isFull()) {
             buffer.enqueue(0.0);
@@ -45,7 +45,6 @@ public class GuitarString {
 
     /* Return the double at the front of the buffer. */
     public double sample() {
-        // TODO: Return the correct thing.
         return buffer.peek();
     }
 }
